@@ -9,7 +9,7 @@ export class MailerController {
   @Post('send')
   public async send(@Body() createEmail: CreateEmail, @Res() res) {
     const recipients = createEmail.recipients;
-    const body = createEmail.body;
+    const body = createEmail.message;
     recipients.forEach(async (recipient) => {
       await this.mailerService.sendMail({
         to: recipient,
