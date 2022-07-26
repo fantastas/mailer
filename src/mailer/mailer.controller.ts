@@ -8,15 +8,15 @@ export class MailerController {
 
   @Post('send')
   public async send(@Body() createEmail: CreateEmail, @Res() res) {
-    const recipients = createEmail.recipients;
+    const recipient = createEmail.recipients;
     const body = createEmail.message;
-    recipients.forEach(async (recipient) => {
-      await this.mailerService.sendMail({
-        to: recipient,
-        subject: 'test',
-        html: body,
-      });
+    // recipients.forEach(async (recipient) => {
+    await this.mailerService.sendMail({
+      to: recipient,
+      subject: 'test',
+      html: body,
     });
-    res.send(recipients);
+    // });
+    res.send(recipient);
   }
 }
