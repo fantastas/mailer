@@ -10,6 +10,7 @@ export class MailerController {
   public async send(@Body() createEmail: CreateEmail, @Res() res) {
     const recipient = createEmail.recipients;
     const body = createEmail.message;
+    console.log(recipient, body);
     // recipients.forEach(async (recipient) => {
     await this.mailerService.sendMail({
       to: recipient,
