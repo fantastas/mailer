@@ -7,16 +7,17 @@ import { MailerService } from './mailer.service';
   imports: [
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.hostinger.com',
-        port: 465,
+        host: 'imap.gmail.com',
+        service: 'gmail',
+        port: 993,
         secure: true,
         auth: {
-          user: 'do-not-reply@scobo.lt',
-          pass: 'Slaptazodisscobo2',
+          user: 'msgitara@gmail.com',
+          pass: 'ywslxtfmfsowbsxc',
         },
       },
       defaults: {
-        from: 'do-not-reply@scobo.lt',
+        from: 'msgitara@gmail.com',
       },
     }),
   ],
