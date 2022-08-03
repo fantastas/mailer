@@ -11,13 +11,13 @@ export class MailerController {
     const recipient = createEmail.recipients;
     const body = createEmail.message;
     console.log(recipient, body);
-    // recipients.forEach(async (recipient) => {
-    await this.mailerService.sendMail({
-      to: recipient,
-      subject: 'test',
-      html: body,
+    recipient.forEach(async (recipient) => {
+      await this.mailerService.sendMail({
+        to: recipient,
+        subject: 'test',
+        html: body,
+      });
     });
-    // });
     res.send(recipient);
   }
 }
