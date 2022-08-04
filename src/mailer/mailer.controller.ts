@@ -18,8 +18,8 @@ export class MailerController {
         subject: 'test',
         html: body[i],
       });
-      i++;
       console.log(body[i]);
+      i++;
     });
     res.send(recipient);
   }
