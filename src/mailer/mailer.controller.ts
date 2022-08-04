@@ -12,7 +12,7 @@ export class MailerController {
     const body = createEmail.message;
     console.log(recipient, body);
     recipient.forEach(async (recipient) => {
-      let i = 0;
+      let i = recipient.indexOf(recipient);
       await this.mailerService.sendMail({
         to: recipient,
         subject: 'test',
