@@ -1,4 +1,4 @@
 export class CreateEmail {
   recipients: string[];
-  message: string;
+  message: string[];
 }
