@@ -19,6 +19,7 @@ export class MailerController {
         html: body[i],
       });
       i++;
+      console.log(body[i]);
     });
     res.send(recipient);
   }
