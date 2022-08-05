@@ -32,14 +32,14 @@ export class MailerController {
 
 <pre style="">Laba diena,
 
-norėtume patikslinti <b>"${company}"</b> "${year}"m. <b>"${month}"</b>
-Intrastato ataskaitos "${intra}" <b>1</b> eilutėje nurodytos prekės
+norėtume patikslinti <b>"${company}"</b> ${year}m. <b>${month}</b>
+Intrastato ataskaitos ${intra} <b>1</b> eilutėje nurodytos prekės
 <b>kiekio</b> (pagal atitinkamą matavimo vienetą) ir <b>masės neto</b>
 duomenis, nes ataskaitoje pateiktas abejotinas prekės svoris.
 
 Būtume dėkingi, jei patikrintumėte, ar pateikti duomenys yra teisingi.
 
-Prašome skubiai susisiekti su mumis el. paštu <a href="mailto:${sender_email}">"${sender_email}"</a> arba telefonu
+Prašome skubiai susisiekti su mumis el. paštu <a href="mailto:${sender_email}">${sender_email}</a> arba telefonu
 863603296 ir patikslinti duomenis arba pranešti, kad pateikti duomenys yra teisingi.
 </pre>
 <div style="display: flex;align-items: center;">
