@@ -3,4 +3,6 @@ export class CreateEmail {
   message: string[];
   prnr: string[];
   validation_title: string[];
+  svorioValidacija: string[];
+  kainosValidacija: string[];
 }
