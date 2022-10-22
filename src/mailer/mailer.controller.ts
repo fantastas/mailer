@@ -21,13 +21,13 @@ export class MailerController {
     const intra = 'Įvežimas UPS-02';
     const sender_name = 'Vardenis Pavardenis';
     console.log(recipient, body);
-    recipient.forEach(async (recipient, i) => {
-      const message = body[i];
-      await this.mailerService.sendMail({
-        // to: recipient,
-        to: 'msgitara@gmail.com', //new
-        subject: 'UPS',
-        html: `
+    // recipient.forEach(async (recipient, i) => {
+    // const message = body[i];
+    await this.mailerService.sendMail({
+      // to: recipient,
+      to: 'msgitara@gmail.com', //new
+      subject: 'UPS',
+      html: `
                 <!DOCTYPE html>
         <html>
         <head>
@@ -78,9 +78,9 @@ export class MailerController {
         </div>
         </body>
         </html>`,
-      });
-      // console.log(message);
     });
+    // console.log(message);
+    // });
     res.send(recipient);
   }
 }
