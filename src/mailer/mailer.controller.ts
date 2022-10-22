@@ -15,7 +15,7 @@ export class MailerController {
     const kainosValidacija = createEmail.kainosValidacija;
     const body = createEmail.message;
     const sender_email = 'sender@vdv.stat.gov.lt';
-    const company = 'test_company';
+    const company = createEmail.company_name;
     const year = '2022';
     const month = 'rugpjūčio';
     const intra = 'Įvežimas UPS-02';
@@ -42,6 +42,7 @@ export class MailerController {
         "${validation_title}"
         "${kainosValidacija}"
         "${svorioValidacija}"
+
         norėtume patikslinti <b>"${company}"</b> ${year}m. <b>${month}</b>
         Intrastato ataskaitos "${intra}" <b>1</b> eilutėje nurodytos prekės
         <b>kiekio</b> (pagal atitinkamą matavimo vienetą) ir <b>masės neto</b>
