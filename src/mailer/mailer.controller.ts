@@ -44,7 +44,7 @@ export class MailerController {
         "${svorioValidacija}"
 
         norėtume patikslinti <b>"${company}"</b> ${year}m. <b>${month}</b>
-        Intrastato ataskaitos "${intra}" <b>1</b> eilutėje nurodytos prekės
+        Intrastato ataskaitos "${intra}" <b>${prnr}</b> eilutėje nurodytos prekės
         <b>kiekio</b> (pagal atitinkamą matavimo vienetą) ir <b>masės neto</b>
         duomenis, nes ataskaitoje pateiktas abejotinas prekės svoris.
 
